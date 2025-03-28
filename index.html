@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rajdhani:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>Wild Eat</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/logo.svg" alt="Logo WildEats">
+        <p class="brandName">WildEat</p>
+    </header>
+
+    <h1>Un petit creux ? </h1>
+
+
+    <section class="filters">
+        <div class="filter-box">
+            <h2 onclick="filterClick(this)">Catégorie</h2>
+            <ul id="categoryList">
+                <li><input type="radio" id="tacos" name="category" value="Tacos"> <label for="tacos"> Tacos</label></li>
+                <li><input type="radio" id="pizza" name="category" value="Pizza"> <label for="pizza"> Pizza</label></li>
+                <li><input type="radio" id="boulangerie" name="category" value="Boulangerie"> <label for="boulangerie"> Boulangerie</label></li>
+                <li><input type="radio" id="sushi" name="category" value="Sushi"> <label for="sushi"> Sushi</label></li>
+                <li><input type="radio" id="brasserie" name="category" value="Brasserie"> <label for="brasserie"> Brasserie</label></li>
+            </ul>
+        </div>
+        <div class="filter-box">
+            <h2 onclick="filterClick(this)">Prix</h2>
+            <ul id="priceList">
+                <li><input type="radio" id="fifteen" name="price" data-price-min="5" data-price-max="15"> <label for="fifteen">5€ - 15€</label></li>
+                <li><input type="radio" id="twenty" name="price" data-price-min="10" data-price-max="20"><label for="twenty">10€ - 20€</label></li>
+                <li><input type="radio" id="twentyfive" name="price" data-price-min="15" data-price-max="25"><label for="twentyfive">15€ - 25€</label></li>
+                <li><input type="radio" id="thirty" name="price" data-price-min="15" data-price-max="30"><label for="thirty">15€ - 30€</label></li>
+                <li><input type="radio" id="twentyplus" name="price" data-price-min="20"><label for="twentyplus">+20€</label></li>
+            </ul>
+        </div>
+        <div class="filter-box">
+            <h2 onclick="filterClick(this)">Classement</h2>
+            <ul id="ratingList">
+                <li><input type="radio" id="oneStar" name="rating" value="⭐"> <label for="oneStar">⭐</label></li>
+                <li><input type="radio" id="twoStars" name="rating" value="⭐⭐"> <label for="twoStars">⭐⭐</label></li>
+                <li><input type="radio" id="threeStars" name="rating" value="⭐⭐⭐"> <label for="threeStars">⭐⭐⭐</label></li>
+                <li><input type="radio" id="fourStars" name="rating" value="⭐⭐⭐⭐"> <label for="fourStars">⭐⭐⭐⭐</label></li>
+                <li><input type="radio" id="fiveStars" name="rating" value="⭐⭐⭐⭐⭐"> <label for="fiveStars">⭐⭐⭐⭐⭐</label></li>
+            </ul>
+        </div>
+        <button class="resetButton">Réinitialiser</button>
+    </section>
+
+    </header>
+    
+    <main>
+        <!--Vignette-->
+        <section class="content">
+            <section class="container">
+                <!--Vignette desktop/mobile vignette 1-->
+                <section class="thumbnail">
+                    <div class="carousel">
+                        <button class="btn" id="prev">&#10096;</button>
+                        <button class="btn" id="next">&#10097;</button>
+                        <ul class="slides">
+                            <li class="slide"><img src="images/sushi1.jpg" alt="city"></li>
+                            <li class="slide active"><img src="images/sushi3.jpg" alt="forest"></li>
+                            <li class="slide"><img src="images/sushi5.jpg" alt="mountains"></li>
+                        </ul>
+                    </div>
+                    <section class="thumbnail-grid">
+                        <h3 class="resto-type">Sushi</h3>
+                        <h4 class="resto-stars">5<div class="resto-stars-WCS"></div>
+                        </h4>
+                        <p class="resto-name ">Saint-Paul Sushi</p>
+                        <p class="resto-adress ">39 Cr Suchet, 69002 Lyon</p>
+                        <p class="resto-phone ">04.78.79.98.97</p>
+                        <p class="resto-price" data-prix-min="10" data-prix-max="20">10€-20€</p>
+                    </section>
+                </section>
+            </section>
+            <!--Vignette desktop/mobile vignette 2-->
+            <section class="container">
+                
+                <section class="thumbnail">
+                    <div class="carousel">
+                        <button class="btn" id="prev">&#10096;</button>
+                        <button class="btn" id="next">&#10097;</button>
+                        <ul>
+                            <li class="slide"><img src="images/tacos2.jpg" alt="Un bon tacos"></li>
+                            <li class="slide active"><img src="images/tacos1.jpg" alt="Un autre bon tacos"></li>
+                            <li class="slide"><img src="images/tacos3.jpg" alt="Un dernier tacos delicieux !"></li>
+                        </ul>
+                    </div>
+                    <section class="thumbnail-grid">
+                        <h3 class="resto-type">Tacos</h3>
+                        <h4 class="resto-stars">3<div class="resto-stars-WCS"></div>
+                        </h4>
+                        <p class="resto-name ">Restaurant Kusadasi 2</p>
+                        <p class="resto-adress ">25 Cr Suchet, 69002 Lyon</p>
+                        <p class="resto-phone ">04.82.31.12.47</p>
+                        <p class="resto-price" data-prix-min="10" data-prix-max="20">10€-20€</p>
+                    </section>
+                </section>
+            </section>
+            <!--Vignette desktop/mobile vignette 3-->
+            <section class="container">                
+                <section class="thumbnail">
+                    <div class="carousel">
+                        <button class="btn" id="prev">&#10096;</button>
+                        <button class="btn" id="next">&#10097;</button>
+                        <ul class="slides">
+                            <li class="slide"><img src="images/brasserie1.jpg" alt="city"></li>
+                            <li class="slide active"><img src="images/brasserie2.jpg" alt="forest"></li>
+                            <li class="slide"><img src="images/brasserie3.jpg" alt="mountains"></li>
+                        </ul>
+                    </div>
+                    <section class="thumbnail-grid">
+                        <h3 class="resto-type">Brasserie</h3>
+                        <h4 class="resto-stars">4<div class="resto-stars-WCS"></div>
+                        </h4>
+                        <p class="resto-name ">Les Vieux Garçons</p>
+                        <p class="resto-adress ">70 Cr Suchet, 69002 Lyon</p>
+                        <p class="resto-phone ">04.78.60.87.86</p>
+                        <p class="resto-price" data-prix-min="20" data-prix-max="30">20€-30€</p>
+                    </section>
+                </section>
+            </section>
+             <!--Vignette desktop/mobile vignette 4-->
+            <section class="container">
+                <section class="thumbnail">
+                    <div class="carousel">
+                        <button class="btn" id="prev">&#10096;</button>
+                        <button class="btn" id="next">&#10097;</button>
+                        <ul class="slides">
+                            <li class="slide"><img src="images/brasserie5.jpg" alt="city"></li>
+                            <li class="slide active"><img src="images/brasserie6.jpg" alt="forest"></li>
+                            <li class="slide"><img src="images/brasserie7.jpg" alt="mountains"></li>
+                        </ul>
+                    </div>
+                    <section class="thumbnail-grid">
+                        <h3 class="resto-type">Brasserie</h3>
+                        <h4 class="resto-stars">5<div class="resto-stars-WCS"></div>
+                        </h4>
+                        <p class="resto-name ">la Source</p>
+                        <p class="resto-adress ">Juste en bas, 69002 Lyon</p>
+                        <p class="resto-phone ">04.87.63.82.87</p>
+                        <p class="resto-price" data-prix-min="20" data-prix-max="30">20€-30€</p>
+                    </section>
+                </section>
+
+            </section>
+                  <!--Vignette desktop/mobile vignette 5-->
+            <section class="container">
+                <section class="thumbnail">
+                    <div class="carousel">
+                        <button class="btn" id="prev">&#10096;</button>
+                        <button class="btn" id="next">&#10097;</button>
+                        <ul class="slides">
+                            <li class="slide"><img src="images/pizza1.jpg" alt="city"></li>
+                            <li class="slide active"><img src="images/pizza4.jpg" alt="forest"></li>
+                            <li class="slide"><img src="images/pizza3.jpg" alt="mountains"></li>
+                        </ul>
+                    </div>
+                    <section class="thumbnail-grid">
+                        <h3 class="resto-type">Pizza</h3>
+                        <h4 class="resto-stars">5<div class="resto-stars-WCS"></div>
+                        </h4>
+                        <p class="resto-name ">Pizzeria Avarello</p>
+                        <p class="resto-adress ">13 Cr Suchet, 69002 Lyon</p>
+                        <p class="resto-phone ">04.78.37.30.55</p>
+                        <p class="resto-price" data-prix-min="10" data-prix-max="20">10€-20€</p>
+                    </section>
+                </section>
+
+            </section>
+            <!--Vignette desktop/mobile vignette 6-->
+            <section class="container">
+                <section class="thumbnail">
+                    <div class="carousel">
+                        <button class="btn" id="prev">&#10096;</button>
+                        <button class="btn" id="next">&#10097;</button>
+                        <ul class="slides">
+                            <li class="slide"><img src="images/boulangerie3.jpg" alt="city"></li>
+                            <li class="slide active"><img src="images/boulangerie1.jpg" alt="forest"></li>
+                            <li class="slide"><img src="images/boulangerie2.jpg" alt="mountains"></li>
+                        </ul>
+                    </div>
+                    <section class="thumbnail-grid">
+                        <h3 class="resto-type">Boulangerie</h3>
+                        <h4 class="resto-stars">5<div class="resto-stars-WCS"></div>
+                        </h4>
+                        <p class="resto-name ">Le Bar à Pains</p>
+                        <p class="resto-adress ">39 Cr Suchet, 69002 Lyon</p>
+                        <p class="resto-phone ">04.72.31.65.16</p>
+                        <p class="resto-price" data-prix-min="5" data-prix-max="10">5€-10€</p>
+                    </section>
+                </section>
+
+            </section>
+        </section>
+    </main>
+    <script src="index.js"></script>
+    <footer>
+        <section>
+        <p><strong>@ WildCodeSchool</strong></p>
+        <p id ="txt-footer">images libre de droit prises sur <a href="https://unsplash.com/fr" target="_blank">Unsplash</a></p>
+        <p id ="txt-footer">logos des réseaux sociaux récupérer sur les sites des ayants droit / section ressource</p>
+        </section>
+        <section id="social">
+        <a href="https://twitter.com/" target="_blank">
+            <img src="images/logo-white.png" alt="Twitter" >
+        </a>
+    
+        <a href="https://instagram.com/" target="_blank">
+            <img src="images/instagram_glyph_white.png" alt="Instagram">
+        </a>
+        <a href="https://facebook.com/" target="_blank">
+            <img src="images/facebook_logo_secondary.png" alt="Instagram">
+        </a>
+    </section>
+    </footer>
+
+</body>
+
+
+</html>
